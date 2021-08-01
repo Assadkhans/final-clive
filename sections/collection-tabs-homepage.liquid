@@ -1,0 +1,28 @@
+<div> 
+
+  {% for item in collections[collection_handle] %}
+  	{{collection.title}}
+  {% endfor %}
+</div>
+
+{% schema %}
+  {
+    "name": "Section name",
+    "settings": [
+	{
+		"type": "collection",
+		"label": "Collection Handle",
+		"id": "collection_handle"
+	}
+
+	
+],
+ "presets": [
+    {
+      "name": "Home Page Collection Tabs",
+      "category": "Image"
+    }
+  ]
+  }
+{% endschema %}
+

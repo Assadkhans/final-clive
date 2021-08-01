@@ -1,0 +1,148 @@
+<style>
+
+.parent .container .row button{
+	position: relative;
+	bottom: 10%;
+	background-color: white;
+	border-style: none;
+	font-size: 2rem;
+	border-radius: 5%;
+
+}
+</style>
+<div class="parent">
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 text-center hover-zoom">
+			<img src="{{section.settings.img_1 | img_url:'master'}}" alt="">
+			<!-- <button id="btn-1"><a href="{{section.settings.link_1}}"> Ladies   </a></button> -->
+
+				{% if section.settings.view-btn != blank %}
+				<button class="view-btn">
+					<a href="{{ section.settings.view-btn-link }}">{{ section.settings.view-btn }}</a>
+				</button>
+				{% endif %}
+			</div>
+		<!-- </div>
+		<div> -->
+			<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 text-center hover-zoom ">
+			<img src="{{section.settings.img_2 | img_url:'master'}}">
+			<!-- <button id="btn-2"><a href="{{section.settings.link_1}}"> Men      </a></button> -->
+				{% if section.settings.view-btn != blank %}
+				<button class="view-btn-2">
+					<a href="{{ section.settings.view-btn-link-2 }}">{{ section.settings.view-btn-2 }}</a>
+				</button>
+				{% endif %}
+			</div>
+		</div>
+
+	</div>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 text-center hover-zoom">
+			<img src="{{section.settings.img_3 | img_url:'master'}}">
+			<!-- <button id="btn-3"><a href="{{section.settings.link_1}}"> Bags      </a></button> -->
+				{% if section.settings.view-btn != blank %}
+				<button class="view-btn-3">
+					<a href="{{ section.settings.view-btn-link-3 }}">{{ section.settings.view-btn-3 }}</a>
+				</button>
+				{% endif %}
+			</div>
+		<!-- </div>
+		<div> -->
+			<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 text-center hover-zoom	">
+			<img src="{{section.settings.img_4 | img_url:'master'}}">
+			<!-- <button id="btn-4"><a href="{{section.settings.link_1}}"> Kids      </a></button> -->
+				{% if section.settings.view-btn != blank %}
+				<button class="view-btn-4">
+					<a href="{{ section.settings.view-btn-link-4 }}">{{ section.settings.view-btn-4 }}</a>
+				</button>
+				{% endif %}
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+
+
+{% schema %}
+{
+
+"name": "Image With Buttons on top",
+"settings": [
+{
+"type": "image_picker",
+"label": "Image name",
+"id" : "img_1"
+},
+
+{
+"id": "view-btn-link",
+"type": "url",
+"label": "Button URL"
+},
+{
+"id": "view-btn",
+"type": "text",
+"label": "Button name"
+},
+
+{
+"type": "image_picker",
+"label": "Image name 2",
+"id" : "img_2"
+},
+{
+"id": "view-btn-link-2",
+"type": "url",
+"label": "Button URL"
+},
+{
+"id": "view-btn-2",
+"type": "text",
+"label": "Button name 2"
+},
+{
+"type": "image_picker",
+"label": "Image3",
+"id" : "img_3"
+},
+{
+"id": "view-btn-link-3",
+"type": "url",
+"label": "Button URL"
+},
+{
+"id": "view-btn-3",
+"type": "text",
+"label": "Button name"
+},
+
+
+{
+"type": "image_picker",
+"label": "Image4",
+"id" : "img_4"
+},
+{
+"id": "view-btn-link-4",
+"type": "url",
+"label": "Button URL"
+},
+{
+"id": "view-btn-4",
+"type": "text",
+"label": "Button name"
+}
+],
+"presets": [
+{
+"name": "Image With Buttons",
+"category": "Collection Images"
+}
+]
+}
+{% endschema %}

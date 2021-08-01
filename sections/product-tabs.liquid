@@ -1,0 +1,85 @@
+<style>
+  .product-content{
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    justify-content: space-between;
+    display: flex;
+     margin: 2em;
+
+  }
+h1{
+margin-left: 35%;
+  
+} 
+</style>
+
+
+<h1>Featured collection</h1>
+
+<div>
+<div class="product-main">
+  {% for block in section.blocks %}
+  {% assign collection_handle = block.settings.collection_name_tabs%}
+  {% for product in collections[collection_handle].products %}
+  <div class="product-item">
+      <div class="product-img">
+        <img src="{{product.featured_image | img_url:'master'}}" height="250px" width="250px">
+      </div>
+      <div class="product-content row row-cols-2">
+          <p class="product-price">{{ product.title}}</p>
+          <p class="product-title">{{product.price}}</p>
+          {% assign current_variant = product.selected_or_first_available_variant %}
+          <p class="text-center col-12">{{ current_variant.sku }}</p>
+      </div>
+  </div>
+  {% endfor%}
+  {% endfor %}
+
+
+
+
+</div>
+</div>
+
+
+{% schema %}
+  {
+    "name": "Asad",
+    "settings": [],
+
+		"blocks" : [
+ {
+    "name": "Asad",
+	"type": "Collection",
+    "settings": [
+					{
+						"type": "collection",
+						"label": "collection-name",
+						"id": "collection_name_tabs"
+					}
+]
+  }
+					
+],
+"presets": [
+			{
+				"name": "collection tabs",
+				"category" : "image"
+			}
+]
+}
+{% endschema %}
+
+
+
+<script>
+  $(document).ready(function(){
+
+    $('.product-main').slick({
+    infinite: true,
+    slidesToShow: 5,
+    slidesToScroll: 5
+  });      
+  })
+
+  </script>

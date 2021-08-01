@@ -3,33 +3,61 @@
     "sections": {
       "header": {
         "type": "header",
-        "settings": {}
-      },
-      "hero-1": {
-        "type": "hero",
         "settings": {
-          "hero_size": "large",
-          "text_size": "large"
+          "align_logo": "left",
+          "logo": "shopify:\/\/shop_images\/image_1.png",
+          "logo_max_width": 100,
+          "main_linklist": "main-menu",
+          "message": true,
+          "home_page_only": false,
+          "message_text": "FREE SHIPPING WITHIN PAKISTAN    l    HELPLINE : (+92) 312-700111",
+          "message_link": "",
+          "color_bg": "#d52027",
+          "color_text": "#ffffff"
         }
       },
       "feature-row": {
         "type": "feature-row",
-        "settings": {}
+        "settings": {
+          "layout": "left",
+          "title": "Image with text",
+          "text": "<p>Pair large text with an image to give focus to your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+          "button_label": "",
+          "button_link": ""
+        }
       },
       "feature-columns": {
         "type": "feature-columns",
         "blocks": {
           "feature-columns-0": {
             "type": "text_block",
-            "settings": {}
+            "settings": {
+              "enable_image": true,
+              "title": "Add a title or tagline",
+              "text": "<p>Share blog posts, products, or promotions with your customers. Use this text to describe products, share details on availability and style, or as a space to display recent reviews or FAQs.<\/p>",
+              "button_label": "",
+              "button_link": ""
+            }
           },
           "feature-columns-1": {
             "type": "text_block",
-            "settings": {}
+            "settings": {
+              "enable_image": true,
+              "title": "Add a title or tagline",
+              "text": "<p>Share blog posts, products, or promotions with your customers. Use this text to describe products, share details on availability and style, or as a space to display recent reviews or FAQs.<\/p>",
+              "button_label": "",
+              "button_link": ""
+            }
           },
           "feature-columns-2": {
             "type": "text_block",
-            "settings": {}
+            "settings": {
+              "enable_image": true,
+              "title": "Add a title or tagline",
+              "text": "<p>Share blog posts, products, or promotions with your customers. Use this text to describe products, share details on availability and style, or as a space to display recent reviews or FAQs.<\/p>",
+              "button_label": "",
+              "button_link": ""
+            }
           }
         },
         "block_order": [
@@ -38,19 +66,19 @@
           "feature-columns-2"
         ],
         "settings": {
-          "title": ""
+          "title": "",
+          "align_text": "left"
         }
       },
       "collection": {
         "type": "collection",
         "settings": {
-          "grid": 4
-        }
-      },
-      "hero-2": {
-        "type": "hero",
-        "settings": {
-          "text_size": "large"
+          "title": "Featured collection",
+          "collection": "",
+          "grid": 4,
+          "rows": 2,
+          "show_vendor": false,
+          "show_view_all": false
         }
       },
       "quotes": {
@@ -58,15 +86,24 @@
         "blocks": {
           "quotes-0": {
             "type": "quote",
-            "settings": {}
+            "settings": {
+              "quote": "<p>Add customer reviews and testimonials to showcase your store’s happy customers.<\/p>",
+              "author": "Author's name"
+            }
           },
           "quotes-1": {
             "type": "quote",
-            "settings": {}
+            "settings": {
+              "quote": "<p>Add customer reviews and testimonials to showcase your store’s happy customers.<\/p>",
+              "author": "Author's name"
+            }
           },
           "quotes-2": {
             "type": "quote",
-            "settings": {}
+            "settings": {
+              "quote": "<p>Add customer reviews and testimonials to showcase your store’s happy customers.<\/p>",
+              "author": "Author's name"
+            }
           }
         },
         "block_order": [
@@ -83,15 +120,27 @@
         "blocks": {
           "image-bar-0": {
             "type": "image",
-            "settings": {}
+            "settings": {
+              "alignment": "center",
+              "link": "",
+              "cta_label": ""
+            }
           },
           "image-bar-1": {
             "type": "image",
-            "settings": {}
+            "settings": {
+              "alignment": "center",
+              "link": "",
+              "cta_label": ""
+            }
           },
           "image-bar-2": {
             "type": "image",
-            "settings": {}
+            "settings": {
+              "alignment": "center",
+              "link": "",
+              "cta_label": ""
+            }
           }
         },
         "block_order": [
@@ -99,37 +148,202 @@
           "image-bar-1",
           "image-bar-2"
         ],
-        "settings": {}
+        "settings": {
+          "section_height": "medium"
+        }
       },
       "footer": {
         "type": "footer",
         "blocks": {
-          "footer-0": {
-            "type": "link_list",
-            "settings": {}
+          "c1643b38-bb0f-45f7-a06f-722bb7c0f410": {
+            "type": "text",
+            "settings": {
+              "title": "",
+              "text": "<p>184 Main Rd E, St Albans<br\/>VIC 3021 Australia<\/p><p>+001 2233 456<\/p><p>contact@company.com<\/p>"
+            }
           },
-          "footer-1": {
+          "ea6add24-fdb9-40b2-a75d-597066b13ee2": {
+            "type": "text",
+            "settings": {
+              "title": "Talk about your business",
+              "text": "<p>Share store details, promotions, or brand content with your customers.<\/p>"
+            }
+          },
+          "bb68554b-4f78-4c7b-acaf-65ec17ebc81d": {
+            "type": "text",
+            "settings": {
+              "title": "Talk about your business",
+              "text": "<p>Share store details, promotions, or brand content with your customers.<\/p>"
+            }
+          },
+          "3459ce39-33cd-48ee-bb1a-06d897ab8cf3": {
+            "type": "text",
+            "settings": {
+              "title": "Talk about your business",
+              "text": "<p>Share store details, promotions, or brand content with your customers.<\/p>"
+            }
+          },
+          "aff242e5-eb04-40de-926b-172b661b8110": {
             "type": "newsletter",
-            "settings": {}
+            "settings": {
+              "title": "Newsletter"
+            }
           }
         },
         "block_order": [
-          "footer-0",
-          "footer-1"
+          "c1643b38-bb0f-45f7-a06f-722bb7c0f410",
+          "ea6add24-fdb9-40b2-a75d-597066b13ee2",
+          "bb68554b-4f78-4c7b-acaf-65ec17ebc81d",
+          "3459ce39-33cd-48ee-bb1a-06d897ab8cf3",
+          "aff242e5-eb04-40de-926b-172b661b8110"
         ],
         "settings": {
-          "show_payment_icons": true
+          "show_payment_icons": true,
+          "color_footer_bg": "#f6f6f6",
+          "color_footer_text": "#333232",
+          "show_locale_selector": true,
+          "show_currency_selector": true
         }
+      },
+      "162729409163862503": {
+        "type": "slideshow",
+        "blocks": {
+          "162729409163862503-0": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Rectangle_3.png",
+              "alignment": "center center",
+              "slide_title": "",
+              "subheading": "",
+              "button_label": "",
+              "button_link": ""
+            }
+          },
+          "162729409163862503-1": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/1920px-X-600px---Web-Banner---Barsaat-f652d5a-so-kamal_2.png",
+              "alignment": "center center",
+              "slide_title": "",
+              "subheading": "",
+              "button_label": "",
+              "button_link": ""
+            }
+          }
+        },
+        "block_order": [
+          "162729409163862503-0",
+          "162729409163862503-1"
+        ],
+        "settings": {
+          "slideshow_height": "adapt",
+          "text_size": "medium",
+          "text_alignment": "center center",
+          "show_overlay": true,
+          "autorotate": false,
+          "autorotate_speed": 5
+        }
+      },
+      "16272942811ed64a84": {
+        "type": "hero",
+        "settings": {
+          "image": "shopify:\/\/shop_images\/1920px-X-600px---Web-Banner---Barsaat-f652d5a-so-kamal_2.png",
+          "alignment": "center",
+          "hero_layout": "full_width",
+          "hero_size": "medium",
+          "text_size": "medium",
+          "title": "",
+          "text": "",
+          "button_label": "",
+          "button_link": ""
+        }
+      },
+      "1627552809e4891dd5": {
+        "type": "collection-images-btn-top",
+        "settings": {
+          "img_1": "shopify:\/\/shop_images\/Ladies_720x_6c82f59f-d5ce-455e-a862-52b96947a735.jpg",
+          "view-btn-link": "shopify:\/\/collections\/women",
+          "view-btn": "Ladies",
+          "img_2": "shopify:\/\/shop_images\/mens_720x_d8b2bf81-2c04-4a9d-8b56-d017205ee2ee.jpg",
+          "view-btn-link-2": "shopify:\/\/collections\/men",
+          "view-btn-2": "Men",
+          "img_3": "shopify:\/\/shop_images\/Bags_720x_97d8c326-9df9-4ff3-9ca1-a7a4d7ced3ad.jpg",
+          "view-btn-link-3": "shopify:\/\/collections\/bags",
+          "view-btn-3": "Bags",
+          "img_4": "shopify:\/\/shop_images\/Kids_720x_76587626-7c44-4506-adca-b371d819df82.jpg",
+          "view-btn-link-4": "shopify:\/\/collections\/kids",
+          "view-btn-4": "Kids"
+        }
+      },
+      "tabs-collection-section": {
+        "type": "tabs-collection-section",
+        "blocks": {
+          "09d2db9d-0bc9-42f3-a9ef-f18b40b5d845": {
+            "type": "item2",
+            "settings": {
+              "tab_name": "Women",
+              "collection": "women",
+              "limit": "8",
+              "toshow": "3",
+              "showbtn": false,
+              "btnname": "SEE ALL"
+            }
+          }
+        },
+        "block_order": [
+          "09d2db9d-0bc9-42f3-a9ef-f18b40b5d845"
+        ],
+        "settings": {
+          "top_offset": "normal",
+          "fullwidth": false,
+          "show_title": true,
+          "text1": "WOMEN’S"
+        }
+      },
+      "1627636180b7cd43b6": {
+        "type": "product-tabs",
+        "blocks": {
+          "60b48836-70d7-437f-be3f-46b0607dacf1": {
+            "type": "Collection",
+            "settings": {
+              "collection_name_tabs": "bags"
+            }
+          },
+          "05ac1f68-8e8b-48e9-b514-6f3e4c4daaae": {
+            "type": "Collection",
+            "settings": {
+              "collection_name_tabs": "women"
+            }
+          }
+        },
+        "block_order": [
+          "60b48836-70d7-437f-be3f-46b0607dacf1",
+          "05ac1f68-8e8b-48e9-b514-6f3e4c4daaae"
+        ],
+        "settings": {}
+      },
+      "collection-template": {
+        "type": "collection-template",
+        "settings": {
+          "layout": "grid",
+          "grid": 4,
+          "rows": 2,
+          "show_collection_image": true,
+          "show_vendor": false,
+          "sort_enable": true,
+          "tags_enable": true
+        }
+      },
+      "new-footer-section": {
+        "type": "new-footer-section",
+        "settings": {}
       }
     },
     "content_for_index": [
-      "hero-1",
-      "feature-row",
-      "feature-columns",
-      "collection",
-      "hero-2",
-      "quotes",
-      "image-bar"
+      "162729409163862503",
+      "1627552809e4891dd5",
+      "16272942811ed64a84",
+      "1627636180b7cd43b6"
     ]
   },
   "presets": {

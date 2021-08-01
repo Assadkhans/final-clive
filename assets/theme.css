@@ -6996,3 +6996,21 @@ hr {
 
 .store-availability-list__phone {
   margin-bottom: 0; }
+
+
+
+ .parent{
+  	display: "flex";
+    flex-direction: column;
+  }
+  .child-1,.child-2{
+  	display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+@media(max-width: 550px){
+  .child-1,.child-2{
+  	flex-direction: column;
+  }
+}
