@@ -124,6 +124,7 @@
               <button type="button" class="btn btn--link medium-up--hide thumbnails-slider__btn thumbnails-slider__next thumbnails-slider__next--{{ section.id }}" data-slider-button data-slider-button-next>
                 {% include 'icon-chevron-right' %}
                 <span class="icon__fallback-text">{{ 'sections.slideshow.next_slide' | t }}</span>
+                
               </button>
             {% endif %}
           </div>
@@ -135,11 +136,16 @@
       <div class="product-single__meta">
 
         <h1 class="product-single__title">{{ product.title }}</h1>
+        
         <script>window.performance.mark('debut:product:title_visible');</script>
 
           <div class="product__price">
             {% include 'product-price', variant: current_variant, show_vendor: section.settings.show_vendor %}
           </div>
+
+          {% assign current_variant = product.selected_or_first_available_variant %}
+          <span class="variant-sku">{{ current_variant.sku }}</span>
+
 
           {%- if cart.taxes_included or shop.shipping_policy.body != blank -%}
             <div class="product__policies rte" data-product-policies>
@@ -163,8 +169,30 @@
 
             {% unless product.has_only_default_variant %}
               <div class="product-form__controls-group">
+                
                 {% for option in product.options_with_values %}
                   <div class="selector-wrapper js product-form__item">
+                    
+
+                    {% if option.name == "Color" %}
+                     
+                    <label >{{option.name}} </label>
+                    {% assign index = forloop.index %}
+                    
+                    <div class="variant-swatches">
+                    {% for value in option.values %}
+                    <input class="single-option-selector-{{ section.id }}"  id="color-{{forloop.index}}" type="radio" name="color" value="{{ value | escape }}" data-index="option{{index}}" {% if option.selected_value == value %} checked {% endif%} />
+                    <label for="color-{{forloop.index}}">
+
+                      <img src="{{value | escape | append:'.png' | strip | asset_url}}" >
+                    </label>
+                      
+                    {% endfor %}
+                  </div>
+
+                    {% else %}
+  
+
                     <label for="SingleOptionSelector-{{ forloop.index0 }}">
                       {{ option.name }}
                     </label>
@@ -176,6 +204,8 @@
                         <option value="{{ value | escape }}"{% if option.selected_value == value %} selected="selected"{% endif %}>{{ value }}</option>
                       {% endfor %}
                     </select>
+                    {% endif %}
+                    
                   </div>
                 {% endfor %}
               </div>
@@ -193,7 +223,7 @@
 
             {% if section.settings.show_quantity_selector %}
               <div class="product-form__controls-group">
-                <div class="product-form__item">
+                <div class="product-form__item ">
                   <label for="Quantity-{{ section.id }}">{{ 'products.product.quantity' | t }}</label>
                   <input type="number" id="Quantity-{{ section.id }}"
                     name="quantity" value="1" min="1" pattern="[0-9]*"
@@ -206,6 +236,7 @@
             <div class="product-form__error-message-wrapper product-form__error-message-wrapper--hidden{% if section.settings.enable_payment_button %} product-form__error-message-wrapper--has-payment-button{% endif %}"
               data-error-message-wrapper
               role="alert"
+              
             >
               <span class="visually-hidden">{{ 'general.accessibility.error' | t }} </span>
               {% include 'icon-error' %}
@@ -213,11 +244,12 @@
             </div>
 
             <div class="product-form__controls-group product-form__controls-group--submit">
-              <div class="product-form__item product-form__item--submit
+               <div class="product-form__item product-form__item--submit 
+                 
                 {%- if section.settings.enable_payment_button %} product-form__item--payment-button {%- endif -%}
                 {%- if product.has_only_default_variant %} product-form__item--no-variants {%- endif -%}"
               >
-                <button type="submit" name="add"
+                <button type="submit" name="add" style="background-color: red; border-radius: 40px; color: white;"
                   {% unless current_variant.available %} aria-disabled="true"{% endunless %}
                   aria-label="{% unless current_variant.available %}{{ 'products.product.sold_out' | t }}{% else %}{{ 'products.product.add_to_cart' | t }}{% endunless %}"
                   class="btn product-form__cart-submit{% if section.settings.enable_payment_button and product.selling_plan_groups == empty %} btn--secondary-accent{% endif %}"
@@ -234,10 +266,12 @@
                     {% include 'icon-spinner' %}
                   </span>
                 </button>
+                {% comment%}
                 {% if section.settings.enable_payment_button %}
                   {{ form | payment_button }}
                 {% endif %}
-              </div>
+                {% endcomment %}
+              </div> 
             </div>
           {% endform %}
         </div>
@@ -271,6 +305,7 @@
 
         <div class="product-single__description rte">
           {{ product.description }}
+          
         </div>
 
         {% if section.settings.show_share_buttons %}

@@ -7014,3 +7014,33 @@ hr {
   	flex-direction: column;
   }
 }
+
+
+
+/* swatches */
+
+.variant-swatches{
+  display: flex;
+  justify-content:flex-start;
+}
+
+.variant-swatches input{
+  display: none;
+}
+.variant-swatches label{
+  max-height: 44px;
+  max-width: 44px;
+  margin-right: 5%;
+}
+.variant-swatches label:last-child{
+  margin-right: 0%;
+}
+.variant-swatches img{
+  height: 100%;
+  width: 100%;
+  border-radius: 100%;
+}
+.variant-swatches input:checked + label{
+  border: none;
+  
+}

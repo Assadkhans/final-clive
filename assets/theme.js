@@ -693,6 +693,7 @@ slate.Variants = (function() {
 
     this.singleOptions.forEach(
       function(option) {
+
         option.addEventListener('change', this._onSelectChange.bind(this));
       }.bind(this)
     );
@@ -731,7 +732,8 @@ slate.Variants = (function() {
      */
     _getVariantFromOptions: function() {
       var selectedValues = this._getCurrentOptions();
-      var variants = this.product.variants;
+
+       var variants = this.product.variants;
 
       var found = variants.find(function(variant) {
         return selectedValues.every(function(values) {
