@@ -36,6 +36,7 @@
   {% endcase %}
 
   <div class="grid product-single{% if section.settings.enable_payment_button %} product-single--{{ section.settings.media_size }}-media{% endif %}">
+    
     <div class="grid__item product-single__media-group {{ product_media_width }}{% if section.settings.media_size == 'full' %} product-single__media-group--full{% endif %}" data-product-single-media-group>
       {%- assign featured_media = product.selected_or_first_available_variant.featured_media | default: product.featured_media -%}
 
@@ -249,7 +250,12 @@
                 {%- if section.settings.enable_payment_button %} product-form__item--payment-button {%- endif -%}
                 {%- if product.has_only_default_variant %} product-form__item--no-variants {%- endif -%}"
               >
-                <button type="submit" name="add" style="background-color: red; border-radius: 40px; color: white;"
+                
+                 {% if product.options contains 'Size' %}
+    <a class="trigger-pop-up btn">See Size Chart</a>
+{% endif %}
+                 
+                 <button type="submit" name="add" style="background-color: red; border-radius: 40px; color: white;"
                   {% unless current_variant.available %} aria-disabled="true"{% endunless %}
                   aria-label="{% unless current_variant.available %}{{ 'products.product.sold_out' | t }}{% else %}{{ 'products.product.add_to_cart' | t }}{% endunless %}"
                   class="btn product-form__cart-submit{% if section.settings.enable_payment_button and product.selling_plan_groups == empty %} btn--secondary-accent{% endif %}"
@@ -304,6 +310,7 @@
         </div>
 
         <div class="product-single__description rte">
+          <h2>Product Description</h2>
           {{ product.description }}
           
         </div>

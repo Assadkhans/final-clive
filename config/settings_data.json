@@ -155,32 +155,32 @@
       "footer": {
         "type": "footer",
         "blocks": {
-          "c1643b38-bb0f-45f7-a06f-722bb7c0f410": {
-            "type": "text",
-            "settings": {
-              "title": "",
-              "text": "<p>184 Main Rd E, St Albans<br\/>VIC 3021 Australia<\/p><p>+001 2233 456<\/p><p>contact@company.com<\/p>"
-            }
-          },
-          "ea6add24-fdb9-40b2-a75d-597066b13ee2": {
-            "type": "text",
-            "settings": {
-              "title": "Talk about your business",
-              "text": "<p>Share store details, promotions, or brand content with your customers.<\/p>"
-            }
-          },
-          "bb68554b-4f78-4c7b-acaf-65ec17ebc81d": {
-            "type": "text",
-            "settings": {
-              "title": "Talk about your business",
-              "text": "<p>Share store details, promotions, or brand content with your customers.<\/p>"
-            }
-          },
           "3459ce39-33cd-48ee-bb1a-06d897ab8cf3": {
             "type": "text",
             "settings": {
-              "title": "Talk about your business",
-              "text": "<p>Share store details, promotions, or brand content with your customers.<\/p>"
+              "title": "",
+              "text": "<link rel=\"stylesheet\" href=\"https:\/\/cdnjs.cloudflare.com\/ajax\/libs\/font-awesome\/4.7.0\/css\/font-awesome.min.css\">\n<div style=\"color: #9C9C9C;\">\n<img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0586\/1012\/2915\/files\/image_1.png?v=1627293523\" alt=\"logo\">\n<br>\n<br>\n\n<span>\n<i class=\"fa fa-map-marker\" aria-hidden=\"true\"><\/i> 184 Main Rd E, St Albans VIC 3021 Australia\n<\/span>\n<br>\n<div>\n<i class=\"fa fa-phone\" aria-hidden=\"true\"><\/i>\n            +001 2233 456\n<\/div>\n<br>\n<div>\n<i class=\"fa fa-envelope \" aria-hidden=\"true\"><\/i>\ncontact@company.com\n<\/div>\n<br>\n<span class=\"d-flex justify-content-around\" style=\"display:inline-flex\">\n\n<a class=\"fa fa-facebook\" aria-hidden=\"true\" style=\"color: #9C9C9C;text-decoration: none; \" href=\"https:\/\/www.facebook.com\/\" target=\"_blank\"> <\/a>\n\n<a class=\"fa fa-twitter\" aria-hidden=\"true\" style=\"color: #9C9C9C;text-decoration: none; \" href=\"https:\/\/www.twitter.com\/\" target=\"_blank\"><\/a>\n        \n<a class=\"fa fa-linkedin\" aria-hidden=\"true\" style=\"color: #9C9C9C;text-decoration: none; \" href=\"https:\/\/www.linkedin.com\/\" target=\"_blank\"><\/a>\n        \n<a class=\"fa fa-instagram\" aria-hidden=\"true\" style=\"color: #9C9C9C;text-decoration: none; \" href=\"https:\/\/www.instagram.com\/\" target=\"_blank\"><\/a>\n\n<\/span>\n    \n<\/div>"
+            }
+          },
+          "596f3aa5-7e75-41e4-af03-c1ce6f861d9e": {
+            "type": "text",
+            "settings": {
+              "title": "Categories",
+              "text": "<div>\n <h6>\n   <a style=\"color: #9C9C9C;text-decoration: none; \" href=\"https:\/\/clive-for-test.myshopify.com\/collections\/men\" target=\"_blank\">Men<\/a>\n <\/h6>\n <h6>\n   <a style=\"color: #9C9C9C;text-decoration: none; \" href=\"https:\/\/clive-for-test.myshopify.com\/collections\/women?ose=false\" target=\"_blank\">Women<\/a>\n <\/h6>\n <h6>\n   <a style=\"color: #9C9C9C;text-decoration: none; \" href=\"https:\/\/clive-for-test.myshopify.com\/collections\/kids\" target=\"_blank\">KIDS<\/a>\n <\/h6>\n <h6>\n   <a style=\"color: #9C9C9C;text-decoration: none; \" href=\"https:\/\/clive-for-test.myshopify.com\/collections\/bags\" target=\"_blank\">Bags<\/a>\n <\/h6>\n<\/div>"
+            }
+          },
+          "d3ee7f09-86c9-40fc-9ba0-8829626e873b": {
+            "type": "text",
+            "settings": {
+              "title": "Information",
+              "text": "<div style=\"color: #9C9C9C;\"> \n\n\n  <h6>About us <\/h6>\n  <h6>Contact Us<\/h6>\n  <h6>Terms and Conditions<\/h6>\n  <h6>Returns &amp; Exchange<\/h6>\n  <h6>Shipping &amp; Delivery<\/h6>\n  <h6>Privacy Policy<\/h6>\n<\/div>"
+            }
+          },
+          "78032514-1585-446b-99e3-4231b56766ba": {
+            "type": "text",
+            "settings": {
+              "title": "Usefull links",
+              "text": "<div style=\"color:#9C9C9C;\">\n\n  <h6>Store Location<\/h6>\n  <h6>Latest News<\/h6>\n  <h6>My account<\/h6>\n  <h6>Size Guide<\/h6>\n  <h6>FAQs<\/h6>\n  <h6>FAQs 2<\/h6>\n<\/div>"
             }
           },
           "aff242e5-eb04-40de-926b-172b661b8110": {
@@ -191,10 +191,10 @@
           }
         },
         "block_order": [
-          "c1643b38-bb0f-45f7-a06f-722bb7c0f410",
-          "ea6add24-fdb9-40b2-a75d-597066b13ee2",
-          "bb68554b-4f78-4c7b-acaf-65ec17ebc81d",
           "3459ce39-33cd-48ee-bb1a-06d897ab8cf3",
+          "596f3aa5-7e75-41e4-af03-c1ce6f861d9e",
+          "d3ee7f09-86c9-40fc-9ba0-8829626e873b",
+          "78032514-1585-446b-99e3-4231b56766ba",
           "aff242e5-eb04-40de-926b-172b661b8110"
         ],
         "settings": {
@@ -337,6 +337,26 @@
       "new-footer-section": {
         "type": "new-footer-section",
         "settings": {}
+      },
+      "product-template": {
+        "type": "product-template",
+        "settings": {
+          "show_quantity_selector": true,
+          "show_vendor": true,
+          "enable_payment_button": true,
+          "show_share_buttons": true,
+          "media_size": "medium",
+          "enable_image_zoom": true,
+          "enable_video_looping": false
+        }
+      },
+      "product-recommendations": {
+        "type": "product-recommendations",
+        "settings": {
+          "show_product_recommendations": true,
+          "heading": "You may also like",
+          "show_vendor": false
+        }
       }
     },
     "content_for_index": [

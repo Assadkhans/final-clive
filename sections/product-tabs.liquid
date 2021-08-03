@@ -1,7 +1,7 @@
 <style>
   .product-content{
     text-align: center;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Cormorant', Segoe UI, Tahoma, Geneva, Verdana, sans-serif;
     justify-content: space-between;
     display: flex;
      margin: 2em;
@@ -11,26 +11,30 @@ h1{
 margin-left: 35%;
   
 } 
+
 </style>
 
 
-<h1>Featured collection</h1>
+<!-- <h1>Featured collection</h1> -->
 
 <div>
+  <h1>{{section.settings.heading}}</h1>
 <div class="product-main">
   {% for block in section.blocks %}
   {% assign collection_handle = block.settings.collection_name_tabs%}
   {% for product in collections[collection_handle].products %}
-  <div class="product-item">
-      <div class="product-img">
+  <div class="product-item container">
+    <div class="row">
+      <div class="">
         <img src="{{product.featured_image | img_url:'master'}}" height="250px" width="250px">
       </div>
-      <div class="product-content row row-cols-2">
-          <p class="product-price">{{ product.title}}</p>
-          <p class="product-title">{{product.price}}</p>
-          {% assign current_variant = product.selected_or_first_available_variant %}
-          <p class="text-center col-12">{{ current_variant.sku }}</p>
+      <div class="product-content carousal row row-cols-2">
+        <p class="product-price">  <b> {{ product.title}}  </b> </p>
+        <p class="product-title">{{product.price}}</p>
+        {% assign current_variant = product.selected_or_first_available_variant %}
+        <p class="text-center col-12">{{ current_variant.sku }}</p>
       </div>
+    </div>
   </div>
   {% endfor%}
   {% endfor %}
@@ -45,7 +49,14 @@ margin-left: 35%;
 {% schema %}
   {
     "name": "Asad",
-    "settings": [],
+    "settings": [
+    {
+
+      "type": "text",
+      "label": "Heading",
+      "id": "heading"
+    }
+    ],
 
 		"blocks" : [
  {
@@ -75,11 +86,47 @@ margin-left: 35%;
 <script>
   $(document).ready(function(){
 
-    $('.product-main').slick({
-    infinite: true,
-    slidesToShow: 5,
-    slidesToScroll: 5
-  });      
-  })
-
-  </script>
+  //   $('.product-main').slick({
+  //   infinite: true,
+  //   slidesToShow: 5,
+  //   slidesToScroll: 5
+  // });      
+  
+  
+  $('.product-main').slick({
+    dots: true,
+    infinite: false,
+  speed: 300,
+  slidesToShow: 5,
+  slidesToScroll: 5,
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        infinite: true,
+        dots: true
+      }
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+    // You can unslick at a given breakpoint now by adding:
+    // settings: "unslick"
+    // instead of a settings object
+  ]
+});
+})
+</script>
